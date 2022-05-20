@@ -1,5 +1,7 @@
 package com.artem.university.service;
 
+import static com.artem.university.util.ConsoleUtil.NOT_FOUND;
+
 import com.artem.university.database.repository.LectorRepository;
 import com.artem.university.dto.LectorDto;
 import com.artem.university.mapper.LectorGlobalSearchMapper;
@@ -18,7 +20,13 @@ public class LectorService {
     private final LectorGlobalSearchMapper lectorGlobalSearchMapper;
 
     public String globalSearchMessage(String name) {
-        return globalSearch(name).stream()
+        var lectors = globalSearch(name);
+
+        if (lectors.isEmpty()) {
+            throw new NullPointerException(NOT_FOUND);
+        }
+
+        return lectors.stream()
             .map(lector -> lector.getFirstname() + " " + lector.getLastname())
             .collect(Collectors.joining(", "));
     }

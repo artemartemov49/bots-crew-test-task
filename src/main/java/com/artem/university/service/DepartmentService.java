@@ -34,15 +34,15 @@ public class DepartmentService {
     private final DepartmentStatisticMapper departmentStatisticMapper;
     private final DepartmentHeadMapper departmentHeadMapper;
 
-    public String getHeadOfDepartmentMessage(String name) {
-        var department = getHeadOfDepartment(name)
+    public String getHeadOfDepartmentMessage(String title) {
+        var department = getHeadOfDepartment(title)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
         return HEAD_OF_DEPARTMENT.formatted(department.getTitle(), department.getFirstname(), department.getLastname());
     }
 
-    public String getStatisticMessage(String name) {
-        var statistic = getStatistic(name)
+    public String getStatisticMessage(String title) {
+        var statistic = getStatistic(title)
             .map(DepartmentStatisticDto::getDegrees)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
@@ -51,37 +51,37 @@ public class DepartmentService {
             getDegree(statistic, Degree.PROFESSOR));
     }
 
-    public String getAverageSalaryMessage(String name) {
-        var avgSalary = getAverageSalary(name)
+    public String getAverageSalaryMessage(String title) {
+        var avgSalary = getAverageSalary(title)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
         return AVERAGE_SALARY.formatted(avgSalary.getTitle(), avgSalary.getAvgSalary());
     }
 
-    public String getEmployeeCountMessage(String name) {
-        var employeeCount = getEmployeeCount(name)
+    public String getEmployeeCountMessage(String title) {
+        var employeeCount = getEmployeeCount(title)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
         return EMPLOYEE_COUNT.formatted(employeeCount.getEmployeeCount());
     }
 
-    private Optional<DepartmentHeadDto> getHeadOfDepartment(String name) {
-        return departmentRepository.findByTitle(name)
+    private Optional<DepartmentHeadDto> getHeadOfDepartment(String title) {
+        return departmentRepository.findByTitle(title)
             .map(departmentHeadMapper::map);
     }
 
-    private Optional<DepartmentStatisticDto> getStatistic(String name) {
-        return departmentRepository.findByTitle(name)
+    private Optional<DepartmentStatisticDto> getStatistic(String title) {
+        return departmentRepository.findByTitle(title)
             .map(departmentStatisticMapper::map);
     }
 
-    private Optional<DepartmentAvgSalaryDto> getAverageSalary(String name) {
-        return departmentRepository.findByTitle(name)
+    private Optional<DepartmentAvgSalaryDto> getAverageSalary(String title) {
+        return departmentRepository.findByTitle(title)
             .map(departmentAverageSalaryMapper::map);
     }
 
-    private Optional<DepartmentEmployeeCountDto> getEmployeeCount(String name) {
-        return departmentRepository.findByTitle(name)
+    private Optional<DepartmentEmployeeCountDto> getEmployeeCount(String title) {
+        return departmentRepository.findByTitle(title)
             .map(departmentEmployeeCountMapper::map);
     }
 

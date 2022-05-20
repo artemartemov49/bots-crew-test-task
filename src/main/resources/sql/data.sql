@@ -4,7 +4,7 @@ VALUES ('Dima', 'Dimov', 54, 'ASSISTANT'),
        ('Olya', 'Kolevna', 25, 'ASSOCIATE_PROFESSOR'),
        ('Sveta', 'Kyznichova', 74, 'PROFESSOR');
 
-INSERT INTO department(name, lector_id)
+INSERT INTO department(title, lector_id)
 VALUES ('Math', 1),
        ('Ukrainian', 2),
        ('Emglish', 3);
