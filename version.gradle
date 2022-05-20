@@ -1,5 +1,0 @@
-ext {
-    versions = [
-            'querydsl'      : '5.0.0'
-    ]
-}
