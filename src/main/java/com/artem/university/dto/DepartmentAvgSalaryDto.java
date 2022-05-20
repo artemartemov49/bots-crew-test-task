@@ -5,7 +5,7 @@ import lombok.Value;
 @Value
 public class DepartmentAvgSalaryDto {
 
-    String name;
+    String title;
 
     Double avgSalary;
 }

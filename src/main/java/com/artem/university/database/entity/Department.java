@@ -31,7 +31,7 @@ public class Department implements BaseEntity<Integer> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
-    String name;
+    String title;
 
     @OneToOne(optional = false)
     @JoinColumn(name = "lector_id")

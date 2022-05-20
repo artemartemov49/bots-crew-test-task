@@ -18,7 +18,7 @@ public class DepartmentStatisticMapper implements Mapper<Department, DepartmentS
     public DepartmentStatisticDto map(Department object) {
         var degrees = getDegrees(object);
 
-        return new DepartmentStatisticDto(object.getName(), degrees);
+        return new DepartmentStatisticDto(object.getTitle(), degrees);
     }
 
     private Map<Degree, Long> getDegrees(Department object) {

@@ -38,7 +38,7 @@ public class DepartmentService {
         var department = getHeadOfDepartment(name)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
-        return HEAD_OF_DEPARTMENT.formatted(department.getDepartmentName(), department.getFirstname(), department.getLastname());
+        return HEAD_OF_DEPARTMENT.formatted(department.getTitle(), department.getFirstname(), department.getLastname());
     }
 
     public String getStatisticMessage(String name) {
@@ -55,7 +55,7 @@ public class DepartmentService {
         var avgSalary = getAverageSalary(name)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
-        return AVERAGE_SALARY.formatted(avgSalary.getName(), avgSalary.getAvgSalary());
+        return AVERAGE_SALARY.formatted(avgSalary.getTitle(), avgSalary.getAvgSalary());
     }
 
     public String getEmployeeCountMessage(String name) {
@@ -66,22 +66,22 @@ public class DepartmentService {
     }
 
     private Optional<DepartmentHeadDto> getHeadOfDepartment(String name) {
-        return departmentRepository.findByName(name)
+        return departmentRepository.findByTitle(name)
             .map(departmentHeadMapper::map);
     }
 
     private Optional<DepartmentStatisticDto> getStatistic(String name) {
-        return departmentRepository.findByName(name)
+        return departmentRepository.findByTitle(name)
             .map(departmentStatisticMapper::map);
     }
 
     private Optional<DepartmentAvgSalaryDto> getAverageSalary(String name) {
-        return departmentRepository.findByName(name)
+        return departmentRepository.findByTitle(name)
             .map(departmentAverageSalaryMapper::map);
     }
 
     private Optional<DepartmentEmployeeCountDto> getEmployeeCount(String name) {
-        return departmentRepository.findByName(name)
+        return departmentRepository.findByTitle(name)
             .map(departmentEmployeeCountMapper::map);
     }
 

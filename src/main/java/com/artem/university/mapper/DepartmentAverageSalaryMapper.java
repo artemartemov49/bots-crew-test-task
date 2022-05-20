@@ -14,7 +14,7 @@ public class DepartmentAverageSalaryMapper implements Mapper<Department, Departm
     public DepartmentAvgSalaryDto map(Department object) {
         var avgSalary = getAvgSalary(object);
 
-        return new DepartmentAvgSalaryDto(object.getName(), avgSalary);
+        return new DepartmentAvgSalaryDto(object.getTitle(), avgSalary);
     }
 
     private double getAvgSalary(Department object) {

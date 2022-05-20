@@ -13,6 +13,6 @@ public class DepartmentEmployeeCountMapper implements Mapper<Department, Departm
     public DepartmentEmployeeCountDto map(Department object) {
         var employeeCount = object.getLectors().size();
 
-        return new DepartmentEmployeeCountDto(object.getName(), employeeCount);
+        return new DepartmentEmployeeCountDto(object.getTitle(), employeeCount);
     }
 }

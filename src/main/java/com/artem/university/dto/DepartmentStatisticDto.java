@@ -7,7 +7,7 @@ import lombok.Value;
 @Value
 public class DepartmentStatisticDto {
 
-    String name;
+    String title;
 
     Map<Degree, Long> degrees;
 }

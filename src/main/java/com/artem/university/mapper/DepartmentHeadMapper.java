@@ -13,6 +13,6 @@ public class DepartmentHeadMapper implements Mapper<Department, DepartmentHeadDt
     public DepartmentHeadDto map(Department object) {
         var headDepartment = object.getHeadDepartment();
 
-        return new DepartmentHeadDto(object.getName(), headDepartment.getFirstname(), headDepartment.getLastname());
+        return new DepartmentHeadDto(object.getTitle(), headDepartment.getFirstname(), headDepartment.getLastname());
     }
 }

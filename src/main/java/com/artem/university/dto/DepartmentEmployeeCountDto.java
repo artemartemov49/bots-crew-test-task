@@ -5,7 +5,7 @@ import lombok.Value;
 @Value
 public class DepartmentEmployeeCountDto {
 
-    String name;
+    String title;
 
     Integer employeeCount;
 }
