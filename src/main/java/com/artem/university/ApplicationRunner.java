@@ -8,12 +8,14 @@ import com.artem.university.service.LectorService;
 import com.artem.university.util.ParserUtil;
 import java.util.Scanner;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @RequiredArgsConstructor
+@Slf4j
 public class ApplicationRunner implements CommandLineRunner {
 
     private final DepartmentService departmentService;
@@ -35,10 +37,10 @@ public class ApplicationRunner implements CommandLineRunner {
                 var commandType = command.getType();
 
                 String result = processCommand(value, commandType);
-                System.out.println(result);
+                log.info(result);
 
             } catch (InappropriateValueException e) {
-                System.out.println(ParserUtil.ERROR_MESSAGE);
+                log.warn(ParserUtil.ERROR_MESSAGE);
             }
         }
     }
