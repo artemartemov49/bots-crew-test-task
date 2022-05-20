@@ -6,7 +6,7 @@ Initialize project steps:
 3) Run program
 4) Write command in command line  
 
-If command have inappropriate format you could see this message:  
+If command has inappropriate format you could see this message:  
 ![Screenshot from 2022-05-20 14-19-05](https://user-images.githubusercontent.com/80060514/169517167-7c327fc3-2654-47b9-9b07-a90e3f2724ed.png)  
 If format is correct and information will not be found you will get NullPointerException(NOT_FOUND) with 'Information not found' message
 ![Screenshot from 2022-05-20 14-21-20](https://user-images.githubusercontent.com/80060514/169517512-4448c269-2806-4d5e-bd1e-a71a0d6f3ac1.png)  
