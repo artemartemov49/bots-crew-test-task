@@ -29,7 +29,9 @@ public class Lector implements BaseEntity<Integer> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
-    String name;
+    String firstname;
+
+    String lastname;
 
     Integer salary;
 

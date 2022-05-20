@@ -7,5 +7,6 @@ public class DepartmentHeadDto {
 
     String name;
 
-    String headOfDepartment;
+    String firstname;
+    String lastname;
 }

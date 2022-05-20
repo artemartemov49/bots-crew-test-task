@@ -38,7 +38,7 @@ public class DepartmentService {
         var department = getHeadOfDepartment(name)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
-        return HEAD_OF_DEPARTMENT.formatted(department.getName(), department.getHeadOfDepartment());
+        return HEAD_OF_DEPARTMENT.formatted(department.getName(), department.getFirstname(), department.getLastname());
     }
 
     public String getStatisticMessage(String name) {

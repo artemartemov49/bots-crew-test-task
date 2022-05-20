@@ -11,7 +11,8 @@ public class DepartmentHeadMapper implements Mapper<Department, DepartmentHeadDt
 
     @Override
     public DepartmentHeadDto map(Department object) {
+        var headDepartment = object.getHeadDepartment();
 
-        return new DepartmentHeadDto(object.getName(), object.getHeadDepartment().getName());
+        return new DepartmentHeadDto(object.getName(), headDepartment.getFirstname(), headDepartment.getLastname());
     }
 }

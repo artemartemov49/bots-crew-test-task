@@ -1,8 +1,8 @@
-INSERT INTO lector(name, salary, degree)
-VALUES ('Dima', 54, 'ASSISTANT'),
-       ('Artem', 100, 'ASSISTANT'),
-       ('Olya', 25, 'ASSOCIATE_PROFESSOR'),
-       ('Sveta', 74, 'PROFESSOR');
+INSERT INTO lector(firstname, lastname, salary, degree)
+VALUES ('Dima', 'Dimov', 54, 'ASSISTANT'),
+       ('Artem', 'Artemov', 100, 'ASSISTANT'),
+       ('Olya', 'Kolevna', 25, 'ASSOCIATE_PROFESSOR'),
+       ('Sveta', 'Kyznichova', 74, 'PROFESSOR');
 
 INSERT INTO department(name, lector_id)
 VALUES ('Math', 1),

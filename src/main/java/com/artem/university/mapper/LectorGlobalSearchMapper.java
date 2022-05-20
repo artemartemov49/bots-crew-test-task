@@ -11,6 +11,6 @@ public class LectorGlobalSearchMapper implements Mapper<Lector, LectorDto> {
 
     @Override
     public LectorDto map(Lector object) {
-        return new LectorDto(object.getName());
+        return new LectorDto(object.getFirstname(), object.getLastname());
     }
 }

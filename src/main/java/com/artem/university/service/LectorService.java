@@ -19,12 +19,12 @@ public class LectorService {
 
     public String globalSearchMessage(String name) {
         return globalSearch(name).stream()
-            .map(LectorDto::getName)
+            .map(lector -> lector.getFirstname() + " " + lector.getLastname())
             .collect(Collectors.joining(", "));
     }
 
-    private List<LectorDto> globalSearch(String name) {
-        return lectorRepository.findAllByNameContainingIgnoreCase(name).stream()
+    private List<LectorDto> globalSearch(String fragment) {
+        return lectorRepository.findAllBy(fragment).stream()
             .map(lectorGlobalSearchMapper::map)
             .toList();
     }

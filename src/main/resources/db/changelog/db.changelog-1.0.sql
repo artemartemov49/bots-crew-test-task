@@ -3,10 +3,11 @@
 --changeset artem:1
 CREATE TABLE IF NOT EXISTS lector
 (
-    id     SERIAL PRIMARY KEY,
-    name   VARCHAR(128) UNIQUE,
-    salary INT,
-    degree VARCHAR(28)
+    id        SERIAL PRIMARY KEY,
+    firstname VARCHAR(128),
+    lastname  VARCHAR(128),
+    salary    INT,
+    degree    VARCHAR(28)
 
 );
 
