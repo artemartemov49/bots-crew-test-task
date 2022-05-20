@@ -13,12 +13,12 @@ If format is correct and information will not be found you will get NullPointerE
 
 #### Commands
 1) Who is head of department {department_name}  
-![Screenshot from 2022-05-20 14-27-32](https://user-images.githubusercontent.com/80060514/169518828-aae320dc-df4b-4c7b-b6c5-5088a58a3c7c.png)
+![Screenshot from 2022-05-20 22-29-02](https://user-images.githubusercontent.com/80060514/169598471-9b6280b6-9cec-42fe-9c15-308eb8a97825.png)
 2) Show {department_name} statistics  
-![Screenshot from 2022-05-20 14-33-13](https://user-images.githubusercontent.com/80060514/169520069-677d2907-cfaf-496e-bdf2-3d20da792618.png)
+![Screenshot from 2022-05-20 22-29-39](https://user-images.githubusercontent.com/80060514/169598552-7cb53299-b3a2-49c7-881c-d43c65c1159a.png)
 3) Show the average salary for the department {department_name}  
-![Screenshot from 2022-05-20 14-36-21](https://user-images.githubusercontent.com/80060514/169520572-a01c4a05-97eb-445a-803d-4755bec7ef24.png)
+![Screenshot from 2022-05-20 22-30-06](https://user-images.githubusercontent.com/80060514/169598646-f072c997-0895-40dc-86ed-faa44aca3824.png)
 4) Show count of employee for {department_name}  
-![Screenshot from 2022-05-20 14-37-40](https://user-images.githubusercontent.com/80060514/169520832-0395df40-3599-4223-ac09-58e45b8bf242.png)
+![Screenshot from 2022-05-20 22-30-51](https://user-images.githubusercontent.com/80060514/169598709-28b12349-e559-403b-ba3d-159550daefb1.png)
 5) Global search by {template}  
-![Screenshot from 2022-05-20 14-39-36](https://user-images.githubusercontent.com/80060514/169520945-3326bdcc-9299-42b0-8b8c-c6d9ff0bc8d5.png)
+![Screenshot from 2022-05-20 22-31-23](https://user-images.githubusercontent.com/80060514/169598742-8fb21ce4-08fc-4d14-bbac-c71802d267db.png)
