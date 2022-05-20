@@ -3,6 +3,7 @@ package com.artem.university.database.entity;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,7 +38,7 @@ public class Department implements BaseEntity<Integer> {
     Lector headDepartment;
 
     @Builder.Default
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "department_lector",
         joinColumns = @JoinColumn(name = "department_id"),
         inverseJoinColumns = @JoinColumn(name = "lector_id"))
