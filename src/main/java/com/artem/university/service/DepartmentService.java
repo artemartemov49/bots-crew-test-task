@@ -38,7 +38,11 @@ public class DepartmentService {
         var department = getHeadOfDepartment(title)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
-        return HEAD_OF_DEPARTMENT.formatted(department.getTitle(), department.getFirstname(), department.getLastname());
+        return HEAD_OF_DEPARTMENT.formatted(
+            department.getTitle(),
+            department.getFirstname(),
+            department.getLastname()
+        );
     }
 
     public String getStatisticMessage(String title) {
@@ -46,9 +50,11 @@ public class DepartmentService {
             .map(DepartmentStatisticDto::getDegrees)
             .orElseThrow(() -> new NullPointerException(NOT_FOUND));
 
-        return STATISTIC.formatted(getDegree(statistic, Degree.ASSISTANT),
+        return STATISTIC.formatted(
+            getDegree(statistic, Degree.ASSISTANT),
             getDegree(statistic, Degree.ASSOCIATE_PROFESSOR),
-            getDegree(statistic, Degree.PROFESSOR));
+            getDegree(statistic, Degree.PROFESSOR)
+        );
     }
 
     public String getAverageSalaryMessage(String title) {

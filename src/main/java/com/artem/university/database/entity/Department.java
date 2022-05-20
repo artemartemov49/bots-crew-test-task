@@ -18,7 +18,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@EqualsAndHashCode(of = "name")
+@EqualsAndHashCode(of = "title")
 @ToString(exclude = "lectors")
 @Data
 @NoArgsConstructor
