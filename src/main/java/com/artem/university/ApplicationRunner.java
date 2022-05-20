@@ -46,7 +46,7 @@ public class ApplicationRunner implements CommandLineRunner {
     }
 
     private String processCommand(String value, TypeDto commandType) {
-        var result = "";
+        var result = "Default value";
 
         switch (commandType) {
             case HEAD_OF_DEPARTMENT -> result = departmentService.getHeadOfDepartmentMessage(value);

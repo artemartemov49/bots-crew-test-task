@@ -5,7 +5,7 @@ import lombok.Value;
 @Value
 public class DepartmentHeadDto {
 
-    String name;
+    String departmentName;
 
     String firstname;
     String lastname;
