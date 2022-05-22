@@ -9,7 +9,7 @@ public interface LectorRepository extends JpaRepository<Lector, Integer> {
 
     @Query("""
         SELECT l FROM Lector l
-        WHERE UPPER(l.firstname) LIKE %:name% OR l.lastname LIKE %:name%
+        WHERE l.firstname LIKE %:name% OR l.lastname LIKE %:name%
         """)
     List<Lector> findAllBy(String name);
 }
