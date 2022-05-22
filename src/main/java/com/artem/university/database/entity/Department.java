@@ -33,7 +33,7 @@ public class Department implements BaseEntity<Integer> {
 
     String title;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "lector_id")
     Lector headDepartment;
 

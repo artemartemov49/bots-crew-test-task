@@ -72,7 +72,7 @@ public class DepartmentService {
     }
 
     private Optional<DepartmentHeadDto> getHeadOfDepartment(String title) {
-        return departmentRepository.findByTitle(title)
+        return departmentRepository.headOfDepartment(title)
             .map(departmentHeadMapper::map);
     }
 
